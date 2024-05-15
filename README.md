@@ -42,4 +42,6 @@ I created this REPL because I was reading [Build your own Lisp](http://www.build
    ```
 
 ## Tested on
+
 - MacOS 14.4.1, Apple M1 Chip
+- gcc 11.4.0, Ubuntu 22.04 (Intel)
