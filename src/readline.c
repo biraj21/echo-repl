@@ -504,7 +504,7 @@ static bool get_cursor_position(unsigned short *row, unsigned short *col) {
 
   char res[16]; // stores response form CPR (cursor position report)
   size_t i;
-  for (i = 0; i < sizeof(res); ++i) {
+  for (i = 0; i < sizeof(res) - 1; ++i) {
     if (read(STDIN_FILENO, &res[i], 1) != 1 || res[i] == 'R') {
       break;
     }
