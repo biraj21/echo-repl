@@ -241,6 +241,8 @@ enum ReadLineResult rl_read_line(char *buf, size_t buf_size, char *prompt) {
       num_chars = current_buf_len;
       break;
 
+    // backward / arrow left
+    case CTRL_KEY('b'):
     case KEY_ARROW_LEFT:
       // if the cursor is at the beginning of the line, do nothing
       if (cursor_pos == 0) {
@@ -252,6 +254,8 @@ enum ReadLineResult rl_read_line(char *buf, size_t buf_size, char *prompt) {
       --cursor_pos;
       break;
 
+    // forward / arrow right
+    case CTRL_KEY('f'):
     case KEY_ARROW_RIGHT:
       // if the cursor is at the end of the line, do nothing
       if (cursor_pos == num_chars) {
